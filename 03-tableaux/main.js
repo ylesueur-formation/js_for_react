@@ -86,36 +86,56 @@ console.log(liHTMLElement);
 
 
 /*************************************************************************** */
-// class MyArray {
-//     constructor(valeurs) {
-//         this.tableau = valeurs
-//     }
+class MyArray {
+    constructor(...valeurs) {
+        this.tableau = valeurs;
+    }
 
-//     myForEach(uneFonction) {
-//         for (let i = 0; i < this.tableau.length; i++) {
-//             uneFonction(this.tableau[i]);
-//         }
-//     }
+    myForEach(uneFonction) {
+        for (let i = 0; i < this.tableau.length; i++) {
+            uneFonction(this.tableau[i]);
+        }
+    }
 
-//     myFilter(uneFonction) {
-//         let newTableau = [];
-//         for (let i = 0; i <  this.tableau.length; i++) {
-//             isOk = uneFonction(this.tableau[i]);
-//             if (isOk === true) {
-//                 newTableau.push(this.tableau[i]);
-//             }
-//         }
-//         return newTableau
-//     }
-// }
+    myFilter(uneFonction) {
+        let newTableau = [];
+        for (let i = 0; i <  this.tableau.length; i++) {
+            let isOk = uneFonction(this.tableau[i]);
+            if (isOk === true) {
+                newTableau.push(this.tableau[i]);
+            }
+        }
+        return newTableau;
+    }
+}
 
+console.log("____________MyFilter____________");
+let nombres = new MyArray(1, 3, 4, 5);
+
+function nombreSup3(nombre) {
+    return nombre > 3;
+}
+nombresFiltres = nombres.myFilter(nombreSup3);
+console.log(nombresFiltres);
+
+console.log("____________Original Filter____________");
+nombres = [1, 3, 4, 5];
+
+nombresFiltres = nombres.filter(nombreSup3);
+console.log(nombresFiltres);
+
+console.log("____________MyForEach____________");
+nombres = new MyArray(1, 3, 4, 5);
+nombres.myForEach(function(nombre) {
+    console.log(nombre);
+});
+
+
+console.log("____________Original forEach____________");
 // let nombres = [1, 3, 4, 5] // let nombre = new Array() <- meme chose
 // nombres.forEach(function(nombre) {
 //     console.log(nombre);
 // });
 
-// nombres = new MyArray([1, 3, 4, 5]);
-// nombres.myForEach(function(nombre) {
-//     console.log(nombre);
-// });
+
 
