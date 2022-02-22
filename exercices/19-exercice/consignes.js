@@ -5,4 +5,9 @@
 */
 let prenoms = ['Mohamed', 'Erika', 'Madi', 'Astou'];
 
-// Write your code here
+let liHTMLElements = prenoms.map( (prenom) => {
+    let liElement = `<li>${prenom}</li>`;
+    return liElement;
+});
+
+console.log(liHTMLElements);

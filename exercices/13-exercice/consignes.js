@@ -3,4 +3,9 @@
 */
 let nombres = [12, 6, 3, 4, 9, 15, 67];
 
-// Write your code here
+nombres.forEach( (nombre) => {
+    let res = nombre * 2;
+    console.log(res);
+});
+
+// nombres.forEach( nombre => console.log(nombre * 2));

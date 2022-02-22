@@ -4,4 +4,10 @@
 let prenoms = ["Marie", "Antoine", "Sarah", "Mandax"];
 
  
-// Write your code here
+let prenomMa = prenoms.filter(function(prenom) {
+    // let startWithMa = prenom.startsWith('Ma');
+    // return startWithMa
+    return prenom.startsWith('Ma'); // true ou false
+});
+
+console.log(prenomMa);

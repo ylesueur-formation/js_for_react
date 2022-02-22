@@ -4,4 +4,8 @@
 
 let prenoms = ["Jean", "Sarah", "John", "Ella"];
 
-// Write your code here
+function afficherPrenom(prenom) {
+  console.log(prenom);
+}
+
+prenoms.forEach(afficherPrenom);

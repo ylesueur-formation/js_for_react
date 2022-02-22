@@ -2,5 +2,8 @@
  *  Faire une fonction anonyme qui affiche "Hello World"
  */
 
-// Write your code here
+let hello = function() {
+    console.log("Hello World !");
+}
 
+hello();

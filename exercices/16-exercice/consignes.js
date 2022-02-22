@@ -9,5 +9,13 @@ let produits = [
     {name: "melon" , prix: 2},
 ];
     
- 
-// Write your code here
+produitFiltrer = produits.filter( (produit) => {
+    if (produit.prix >= 2) {
+        return true;
+    } else {
+        return false;
+    }
+    // return produit.prix >= 2;
+})
+
+console.log(produitFiltrer);

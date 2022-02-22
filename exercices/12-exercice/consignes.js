@@ -4,3 +4,7 @@
 let languages = ["JavaScript", "HTML",  "CSS", "nodejs"];
 
  // Write your code here.
+languages.forEach(function(language) {
+    let langMajuscule = language.toUpperCase();
+    console.log(langMajuscule);
+})

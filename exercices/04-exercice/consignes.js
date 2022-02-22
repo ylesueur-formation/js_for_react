@@ -2,5 +2,9 @@
  * Faire une fonction qui prend un paramètre 'prenom' et affiche Bonjour suivi du prénom
  */
 
-// Write your code here
 
+function afficherPrenom(prenom) {
+    console.log("Bonjour " + prenom);
+}
+
+afficherPrenom("Yohann");

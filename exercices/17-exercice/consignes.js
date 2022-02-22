@@ -6,5 +6,11 @@
 */
 let prenoms = ["Priam", "Hortense", "Rose", "Ingrid", "Bryan"];
 
- 
-// Write your code here
+function creerNomDomaine(prenom) {
+    // console.log(prenom);
+    let domain = 'https://' + prenom + ".com";
+    // console.log(domain);
+    return domain;
+}
+let nomDomaines = prenoms.map(creerNomDomaine);
+console.log(nomDomaines);

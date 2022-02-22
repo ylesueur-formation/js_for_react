@@ -7,6 +7,6 @@
  * https://www.pouce-cm.fr/
  */
 
-
-// Write your code here
-
+let pouces = process.argv[2];
+let resultat = pouces * 2.54;
+console.log(`${pouces}" = ${resultat}cm`);
